@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from 'react';
 
 function App() {
     return ( 
         <div className="App">
-           <h3>shamim</h3>
+           <h1
+           >Components</h1>
            <New name="Shamim" email="shamimislamonline@gmail.com"></New>
            <New name="Salman" email="salmanislamonline@gmail.com"></New>
            <New name="Rafiq" email="rafiqislamonline@gmail.com"></New>
@@ -14,11 +16,13 @@ function App() {
 }
 
 function New (props) {
+    const a = useState(100);
+    console.log(a);
     return (
         <div>
-            <h1>Name: {props.name}</h1>
-            <h3>Email: {props.email} </h3>
-            <h5>Id: 400000</h5>
+            <h3>Name: {props.name}</h3>
+            <p>Email: {props.email} </p>
+            <h5>Id: 12233</h5>
         </div>
     )
 }
