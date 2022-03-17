@@ -5,7 +5,7 @@
 .country {
     border: 2px solid red;
     border-radius: 50px;
-    background-color: aqua;
+    background-color: rgb(0, 0, 0);
     margin: 10px;
     padding: 10px;
 }

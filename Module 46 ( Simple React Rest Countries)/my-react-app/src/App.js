@@ -41,7 +41,7 @@ function Country(props){
   return(
     <div className='country'>
       <img src={props.flags} alt="" />
-      <h3>Name: {props.name}</h3>
+      <h3 style={{color: 'white'}}>Name: {props.name}</h3>
     </div>
   )
 }
