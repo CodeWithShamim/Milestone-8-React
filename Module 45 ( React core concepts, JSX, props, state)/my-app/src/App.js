@@ -9,9 +9,9 @@ function App() {
     return ( 
         <div className="App">
            <h1>Components</h1>
-            {Data.map( ({id, name, shift, group}, index) => <New key={index} id={id} name={name} shift={shift} group={group}></New>)}
+            {Data.map( ({id, name, shift, group}) => <New id={id} name={name} shift={shift} group={group}></New>)}
 
-            <Update/>
+            <ExternalUsers/>
 
         </div>
     );
@@ -65,16 +65,23 @@ function New (props) {
 
 
 
-function Update(){
+function ExternalUsers(){
 
-   useEffect( fetch('https://jsonplaceholder.typicode.com/todos/1')
-   .then(res => res.json())
-   .then(data => console.log(data)),[])
+    const [users, setUsers] = useState([]);
+
+   useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/todos')
+    .then(res => res.json())
+    .then(data => setUsers(data))
+   } 
+   ,[]);
+
+   console.log(users);
 
 
     return (
         <div style={{color: 'blue', border: '2px solid red', padding: '10px'}}>
-            <h1>Update</h1>
+            <h1>ExternalUsers</h1>
         </div>
     )
 }
