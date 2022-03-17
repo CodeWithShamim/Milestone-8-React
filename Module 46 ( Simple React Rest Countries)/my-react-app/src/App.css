@@ -1,11 +1,18 @@
 .App {
     text-align: center;
+    width: 1300px;
+    margin: 0 auto;
 }
 
 .country {
-    border: 2px solid red;
     border-radius: 50px;
     background-color: rgb(0, 0, 0);
     margin: 10px;
     padding: 10px;
+}
+
+.container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, min-max(100, 1fr)); */
+    grid-template-columns: repeat(4, 1fr);
 }

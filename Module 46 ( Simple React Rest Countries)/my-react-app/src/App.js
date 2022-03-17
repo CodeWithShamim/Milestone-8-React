@@ -6,7 +6,6 @@ import React from 'react';
 function App() {
   return (
     <div className="App">
-      <p>Hello</p>
       <LoadCountries></LoadCountries>
     </div>
   );
@@ -28,8 +27,10 @@ function LoadCountries(){
 
   return (
     <div>
-      <h1>Visit All Country</h1>
+      <h1 style={{color: 'blue' , textTransform:"uppercase"}}>Country-King</h1>
+      <div className='container'>
       { countries.map(countrie => <Country name={countrie.name.common} flags={countrie.flags.png}></Country>)}
+      </div>
     </div>
   )
 
@@ -40,7 +41,7 @@ function LoadCountries(){
 function Country(props){
   return(
     <div className='country'>
-      <img src={props.flags} alt="" />
+      <img style={{width: '100%', borderRadius:"60px"}} src={props.flags} alt="" />
       <h3 style={{color: 'white'}}>Name: {props.name}</h3>
     </div>
   )
