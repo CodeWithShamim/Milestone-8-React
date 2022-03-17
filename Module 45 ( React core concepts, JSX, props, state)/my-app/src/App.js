@@ -70,7 +70,7 @@ function ExternalUsers(){
     const [users, setUsers] = useState([]);
 
    useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/todos')
+    fetch('https://jsonplaceholder.typicode.com/users')
     .then(res => res.json())
     .then(data => setUsers(data))
    } 
@@ -81,7 +81,7 @@ function ExternalUsers(){
 
     return (
         <div style={{color: 'blue', border: '2px solid red', padding: '10px'}}>
-            <h1 style={{color: 'red', border: '2px solid blue'}}>{users.map(user=> user.title)}</h1>
+            <h1 style={{color: 'blue', border: '2px solid blue'}}>{users.map(user=> <li>{user.name}</li>)}</h1>
         </div>
            );
 }
