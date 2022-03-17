@@ -76,14 +76,14 @@ function ExternalUsers(){
    } 
    ,[]);
 
-   console.log(users);
+//    console.log(users);
 
 
     return (
         <div style={{color: 'blue', border: '2px solid red', padding: '10px'}}>
-            <h1>{users.map(user=> user.title)}</h1>
+            <h1 style={{color: 'red', border: '2px solid blue'}}>{users.map(user=> user.title)}</h1>
         </div>
-    )
+           );
 }
 
 export default App;
