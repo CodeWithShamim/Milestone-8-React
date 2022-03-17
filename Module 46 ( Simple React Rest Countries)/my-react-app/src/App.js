@@ -23,13 +23,28 @@ function LoadCountries(){
       .then(data => setCountries(data))
       },
   []);
-  console.log(countries);
-  return(
+
+  console.log(countries[0]);
+
+  return (
     <div>
-      <h1>Hello</h1>
+      <h1>Visit All Country</h1>
+      { countries.map(countrie => <Country name={countrie.name.common} flags={countrie.flags.png}></Country>)}
     </div>
   )
 
 }
+
+
+
+function Country(props){
+  return(
+    <div className='country'>
+      <img src={props.flags} alt="" />
+      <h3>Name: {props.name}</h3>
+    </div>
+  )
+}
+
 
 export default App;
