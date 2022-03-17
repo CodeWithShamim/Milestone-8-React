@@ -81,7 +81,7 @@ function ExternalUsers(){
 
     return (
         <div style={{color: 'blue', border: '2px solid red', padding: '10px'}}>
-            <h1>ExternalUsers</h1>
+            <h1>{users.map(user=> user.title)}</h1>
         </div>
     )
 }
