@@ -77,13 +77,23 @@ function ExternalUsers(){
    ,[]);
 
 //    console.log(users);
+return(
+    <div>
+        {users.map(user=> <Details name={user.name} email={user.email}></Details>)}
+    </div>
+)
 
+}
 
+function Details(props){
     return (
-        <div style={{color: 'blue', border: '2px solid red', padding: '10px'}}>
-            <h1 style={{color: 'blue', border: '2px solid blue'}}>{users.map(user=> <li>{user.name}</li>)}</h1>
+        <div style={{color: 'blue', border: '2px solid red', padding: '10px', backgroundColor: 'lightgoldenrodyellow', margin: '10px'}}>
+            <h2>Name:{props.name}</h2>
+            <p>Email:{props.email}</p>
         </div>
            );
 }
+    
+
 
 export default App;
