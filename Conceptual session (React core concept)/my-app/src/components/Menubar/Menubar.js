@@ -1,11 +1,23 @@
 import React from 'react';
-import Shared from '../Shared/Shared';
+// import Shared from '../Shared/Shared';
+import './Menubar.css'
 
 const Menubar=() => {
     return (
         <div>
-            <h1>This is menubar</h1>
-            <Shared></Shared>
+            <div className="container">
+                <div className="row menu-container">
+                    <div className="col-md-2">
+                        <h1>Logo</h1>
+                    </div>
+                    <div className="col-md-10 menu-list">
+                        <li>Home</li>
+                        <li>Contact</li>
+                        <li>Cart</li>
+                        <li>Login</li>
+                    </div>
+                </div>
+            </div>
 
         </div>
     );
