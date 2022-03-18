@@ -2,7 +2,7 @@ import React from 'react';
 // import Shared from '../Shared/Shared';
 import './Menubar.css'
 
-const Menubar=() => {
+const Menubar=({count}) => {
     return (
         <div>
             <div className="container">
@@ -13,7 +13,7 @@ const Menubar=() => {
                     <div className="col-md-10 menu-list">
                         <li>Home</li>
                         <li>Contact</li>
-                        <li>Cart</li>
+                        <li>Cart <sup className='text-warning fw-bold fs-4'>{count}</sup></li>
                         <li>Login</li>
                     </div>
                 </div>

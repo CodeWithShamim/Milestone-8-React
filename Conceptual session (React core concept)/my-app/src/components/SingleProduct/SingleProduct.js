@@ -1,7 +1,9 @@
 import React from 'react';
 import './SingleProduct.css'
 
-const SingleProduct=({product}) => {
+const SingleProduct=({product, addToCart}) => {
+    // console.log(addToCart);
+   
     // console.log(props.product);
     const {image, title} = product;
     return (
@@ -11,7 +13,7 @@ const SingleProduct=({product}) => {
                 <div className="card-body">
                     <h5 className="card-title h-50">{title}</h5>
                     <div className='d-flex justify-content-around my-4'>
-                        <button className='btn btn-primary fw-bold'>Add To Cart</button>
+                        <button onClick={addToCart} className='btn btn-primary fw-bold'>Add To Cart</button>
                         <button className='btn btn-danger fw-bold'>Delete</button>
                         <button className='btn btn-info fw-bold'>Details</button>
                     </div>
