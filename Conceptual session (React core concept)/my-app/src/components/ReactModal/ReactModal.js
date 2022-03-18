@@ -1,4 +1,4 @@
-import {Button, Modal} from 'bootstrap';
+import {Button, Modal} from 'react-bootstrap';
 import React, {useState} from 'react';
 
 const ReactModal = () => {
@@ -8,8 +8,8 @@ const ReactModal = () => {
     const handleShow = () => setShow(true);
     return (
         <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
+      <Button variant="info" onClick={handleShow}>
+        Details
       </Button>
 
       <Modal show={show} onHide={handleClose}>
