@@ -1,11 +1,12 @@
 import React from 'react';
+import ReactModal from '../ReactModal/ReactModal';
 import './SingleProduct.css'
 
-const SingleProduct=({product, addToCart}) => {
+const SingleProduct=({product,addToCart}) => {
     // console.log(addToCart);
-   
+
     // console.log(props.product);
-    const {image, title} = product;
+    const {image,title}=product;
     return (
         <div className="card-group col-12 col-md-6 col-lg-4">
             <div className="card">
@@ -15,7 +16,10 @@ const SingleProduct=({product, addToCart}) => {
                     <div className='d-flex justify-content-around my-4'>
                         <button onClick={addToCart} className='btn btn-primary fw-bold'>Add To Cart</button>
                         <button className='btn btn-danger fw-bold'>Delete</button>
-                        <button className='btn btn-info fw-bold'>Details</button>
+                        {/* <button className='btn btn-info fw-bold'>Details</button> */}
+                        <ReactModal></ReactModal>
+                        
+
                     </div>
                     {/* <p className="card-text">{description.slice(0, 150)}</p>
                     <h4>Price:{price}</h4> */}
