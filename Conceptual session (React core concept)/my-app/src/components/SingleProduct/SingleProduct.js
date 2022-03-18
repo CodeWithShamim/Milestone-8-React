@@ -17,7 +17,7 @@ const SingleProduct=({product,addToCart}) => {
                         <button onClick={addToCart} className='btn btn-primary fw-bold'>Add To Cart</button>
                         <button className='btn btn-danger fw-bold'>Delete</button>
                         {/* <button className='btn btn-info fw-bold'>Details</button> */}
-                        <ReactModal></ReactModal>
+                        <ReactModal product={product}></ReactModal>
                         
 
                     </div>
