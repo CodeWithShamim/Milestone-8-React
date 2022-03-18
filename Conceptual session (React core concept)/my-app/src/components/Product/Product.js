@@ -12,9 +12,9 @@ const Product=() => {
     ,[products]);
     // console.log(products);
     return (
-        <div className='container mt-4 text-primary text-uppercase'>
-            <h1>All Product</h1>
-            <div className='row my-5 g-5'>    
+        <div className='container mt-4'>
+            <h1 className='fw-bold text-black text-uppercase'>All Product</h1>
+            <div className='row my-2 my-md-3 g-5'>    
                 {products.map((product, index)=><SingleProduct key={index} product={product}></SingleProduct>)} 
             </div>
 
