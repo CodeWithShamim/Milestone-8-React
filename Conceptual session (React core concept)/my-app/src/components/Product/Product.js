@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import SingleProduct from '../SingleProduct/SingleProduct';
+import './Product.css'
 
 const Product=() => {
     const [products, setProducts] = useState([]);
@@ -14,8 +15,9 @@ const Product=() => {
         <div className='container mt-4 text-primary text-uppercase'>
             <h1>All Product</h1>
             <div className='row'>
-                <div className="col-md-6">
+                <div className="product-container">
                     {products.map((product, index)=><SingleProduct key={index} product={product}></SingleProduct>)} 
+                   
                 </div>
             </div>
 
