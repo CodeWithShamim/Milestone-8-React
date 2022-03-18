@@ -3,15 +3,20 @@ import './SingleProduct.css'
 
 const SingleProduct=({product}) => {
     // console.log(props.product);
-    const {image, description, title, price} = product;
+    const {image, title} = product;
     return (
-        <div className="card-group">
+        <div className="card-group col-md-4">
             <div className="card">
                 <img src={image} className="card-img-top img-fluid" id='image' alt="..." />
                 <div className="card-body">
-                    <h5 className="card-title">{title}</h5>
-                    <p className="card-text">{description.slice(0, 150)}</p>
-                    <h4>Price:{price}</h4>
+                    <h5 className="card-title h-50">{title}</h5>
+                    <div className='d-flex justify-content-around my-4'>
+                        <button className='btn btn-primary'>Add To Cart</button>
+                        <button className='btn btn-danger'>Delete</button>
+                        <button className='btn btn-info'>Details</button>
+                    </div>
+                    {/* <p className="card-text">{description.slice(0, 150)}</p>
+                    <h4>Price:{price}</h4> */}
                 </div>
             </div>
         </div>
