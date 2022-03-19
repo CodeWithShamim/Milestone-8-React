@@ -2,13 +2,17 @@ import React from 'react';
 import ReactModal from '../ReactModal/ReactModal';
 import './SingleProduct.css'
 
+
+
 const SingleProduct=({product,addToCart}) => {
     // console.log(addToCart);
 
     // console.log(props.product);
     const {image,title}=product;
     return (
-        <div className="card-group col-12 col-md-6 col-lg-4">
+        <div  data-aos="flip-left"
+        data-aos-easing="linear"
+        data-aos-duration="1500" className="card-group col-12 col-md-6 col-lg-4">
             <div className="card">
                 <img src={image} className="card-img-top img-fluid" id='image' alt="..." />
                 <div className="card-body">
