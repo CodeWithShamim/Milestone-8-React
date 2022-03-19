@@ -10,7 +10,7 @@ const SingleProduct=({product,addToCart}) => {
     // console.log(props.product);
     const {image,title}=product;
     return (
-        <div  data-aos="flip-left"
+        <div data-aos="flip-left"
         data-aos-easing="linear"
         data-aos-duration="1500" className="card-group col-12 col-md-6 col-lg-4">
             <div className="card">
