@@ -1,5 +1,6 @@
 import {Button, Modal} from 'react-bootstrap';
 import React, {useState} from 'react';
+// import './ReactModal.css'
 
 const ReactModal = ({product}) => {
     // console.log(product)
