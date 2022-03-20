@@ -1,6 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react';
+import Display from './components/Display/Display';
+import ClassComponent from './components/ClassComponent/ClassComponent';
 
 function App() {
   const [count, setCount] = useState(1);
@@ -20,6 +22,9 @@ function App() {
     <div className="App">
       <h1>Count:{count}</h1>
       <button onClick={addCount}>Add</button>
+      <Display name={count}></Display>
+
+      <ClassComponent></ClassComponent>
     </div>
   );
 }
