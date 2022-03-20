@@ -8,8 +8,8 @@ function App() {
 
     let newCount;
 
-    if(count === 2){
-      newCount = 2;
+    if(count === 10){
+      newCount = 1;
     }else{
       newCount = count +1;
     }
