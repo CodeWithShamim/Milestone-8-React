@@ -12,7 +12,7 @@ useEffect(()=>{
 },[]);
   return (
     <div className="App">
-      {items.map(item=> <New item={item}></New>)}
+      {items.map(item=> <New key={item.id} item={item}></New>)}
 
     </div>
   );
