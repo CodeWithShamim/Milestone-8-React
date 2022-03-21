@@ -1,5 +1,5 @@
 import React from 'react';
-import {addItem} from '../../utilities/storage';
+import {addItem, removeCart} from '../../utilities/storage';
 
 const New=(props) => {
     const {name, id, price,} = props.item
@@ -10,7 +10,9 @@ const New=(props) => {
       };
       
     //   const addToCartWithP = () => addToCart(id)
-       
+      const removeFromCart = () => {
+          removeCart(id);
+      };
      
 
 
@@ -21,6 +23,7 @@ const New=(props) => {
            <p>ID: {id}</p>
            {/* <button onClick={addToCartWithP }>Add To Cart</button> */}
            <button onClick={() => addToCart(id) }>Add To Cart</button>
+           <button onClick={id=>removeFromCart(id)}>Remove</button>
         </div>
     );
 };
