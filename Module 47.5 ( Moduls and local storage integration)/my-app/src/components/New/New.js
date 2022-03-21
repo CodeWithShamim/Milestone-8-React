@@ -1,11 +1,12 @@
 import React from 'react';
+import {addItem} from '../../utilities/storage';
 
 const New=(props) => {
     const {name, id, price,} = props.item
     // console.log(name);
 
     const addToCart=(id)=>{
-        console.log(id);
+        addItem(id)
       };
       
     //   const addToCartWithP = () => addToCart(id)
