@@ -10,6 +10,8 @@ useEffect(()=>{
   .then(res=> res.json())
   .then(data=>setItems(data));
 },[]);
+
+
   return (
     <div className="App">
       {items.map(item=> <New key={item.id} item={item}></New>)}
