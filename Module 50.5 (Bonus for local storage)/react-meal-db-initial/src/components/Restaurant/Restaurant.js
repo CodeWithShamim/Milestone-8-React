@@ -22,7 +22,20 @@ const Restaurant = () => {
 
     useEffect(()=>{
         const storedCart = getStoredCart();
-        console.log(storedCart);
+        // console.log(storedCart);
+        const savedCart = []
+        for(const id in storedCart){
+            const addedOrders = meals.find(m=>m.idMeal === id);
+            if(addedOrders){
+                // console.log(addedOrders);
+                const quantity = storedCart[id];
+                console.log(quantity);
+                addedOrders.quantity = quantity;
+                savedCart.push(addedOrders);
+
+            }
+        };
+        setOrders(savedCart)
     },[meals])
     /* 
         The above api link or the below method will now work for search. 
