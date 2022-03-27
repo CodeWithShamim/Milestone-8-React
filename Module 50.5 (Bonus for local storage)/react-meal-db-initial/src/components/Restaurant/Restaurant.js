@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import {addToDb, getStoredCart} from '../../utilities/fakedb';
 import Meal from '../Meal/Meal';
 import OrderList from '../OrderList/OrderList';
 import './Restaurant.css';
@@ -12,6 +13,17 @@ const Restaurant = () => {
             .then(res => res.json())
             .then(data => setMeals(data.meals));
     }, []);
+
+    const addToCart = (meal)=>{
+        const newCart  = [...orders, meal];
+        setOrders(newCart);
+        addToDb(meal.idMeal);
+    }
+
+    useEffect(()=>{
+        const storedCart = getStoredCart();
+        console.log(storedCart);
+    },[meals])
     /* 
         The above api link or the below method will now work for search. 
         if you want to implement search in this code. 
@@ -35,6 +47,7 @@ const Restaurant = () => {
                     meals.map(meal => <Meal
                         key={meal.idMeal}
                         meal={meal}
+                        addToCart={addToCart}
                     ></Meal>)
                 }
             </div>

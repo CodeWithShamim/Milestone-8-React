@@ -1,9 +1,9 @@
 import React from 'react';
 
-const OrderList = (props) => {
-    const { orders } = props;
+const OrderList=(props) => {
+    const {orders}=props;
 
-    
+
     return (
         <div>
             <h2>Order List</h2>
