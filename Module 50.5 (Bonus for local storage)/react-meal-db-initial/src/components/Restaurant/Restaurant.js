@@ -15,7 +15,18 @@ const Restaurant = () => {
     }, []);
 
     const addToCart = (meal)=>{
-        const newCart  = [...orders, meal];
+        let newCart = [];
+        const exists = orders.find(order=>order.idMeal === meal.idMeal);
+        if(exists){
+            const rest = orders.filter(order=>order.idMeal !== meal.idMeal);
+            exists.quantity = exists.quantity + 1;
+            newCart = [...rest, exists];
+
+        }
+        else{
+            meal.quantity = 1;
+            newCart  = [...orders, meal];
+        }
         setOrders(newCart);
         addToDb(meal.idMeal);
     }
